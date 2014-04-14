@@ -60,4 +60,8 @@ Spree21::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  Spree::Core::Engine.add_routes do
+    get 'admin/products/available' => 'admin/products#available'
+    get 'admin/products/unavailable' => 'admin/products#unavailable'
+  end
 end
